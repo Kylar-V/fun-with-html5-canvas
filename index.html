@@ -6,7 +6,8 @@
     <link rel="icon" href="https://fav.farm/🔥" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-      html, body {
+      html,
+      body {
         margin: 0;
         padding: 0;
         height: 100%;
@@ -31,10 +32,9 @@
       window.addEventListener("resize", resizeCanvas);
       resizeCanvas();
 
-      ctx.strokeStyle = "#BADASS";
       ctx.lineJoin = "round";
       ctx.lineCap = "round";
-      ctx.lineWidth = 100;
+      ctx.lineWidth = 5; // Initial line width
 
       let isDrawing = false;
       let lastX = 0;
@@ -65,7 +65,7 @@
           hue = 0;
         }
 
-        if (ctx.lineWidth >= 125 || ctx.lineWidth <= 1) {
+        if (ctx.lineWidth >= 100 || ctx.lineWidth <= 1) {
           direction = !direction;
         }
         if (direction) {
